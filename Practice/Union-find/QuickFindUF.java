@@ -1,19 +1,17 @@
 /*
     CHAPTER 1:
 */
-public class UF 
+public class QuickFindUF 
 {
     private int[] id;  // access to component id (site indexed)
     private int count; // number of components
     
-    public UF(int N)
+    public QuickFindUF(int N)
     {
         count = N;
         id = new int[N];
         for (int i =0; i<N; i++)
-        {
-            id[i] = i;
-        }
+        {   id[i] = i;    }
     }
 
     public int count()
@@ -43,18 +41,20 @@ public class UF
     public static void main(String[] args)
     {   // Solve dynamic connectivity problem on StdIn.
         int N = StdIn.readInt();            // Read number from sites.
-        UF uf = new UF(N);                  // Init N components
+        QuickFindUF UF = new QuickFindUF(N);                  // Init N components
         while (!StdIn.isEmpty())
         {
             int p = StdIn.readInt();        // Read pair to connect
             int q = StdIn.readInt();
             
-            if (uf.connected(p,q))          // Ignore if connected
+            if (UF.connected(p,q))          // Ignore if connected
             {   continue;   }
 
-            uf.union(p, q);                 // Combine components
+            UF.union(p, q);                 // Combine components
             StdOut.println(p + " " + q);    // Print connection
         }
-        StdOut.println(uf.count() + " components");
+        StdOut.println(UF.count() + " components");
     }
 }
+
+/** Change a little bit to test git */
