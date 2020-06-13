@@ -1,5 +1,3 @@
-import edu.princeton.cs.algs4.StdRandom;
-import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
@@ -122,15 +120,15 @@ public class Percolation {
         {   throw new IllegalArgumentException();   }
     }
     // test client (optional)
-    public static void main(String[] args)
-    {
-        Percolation test = new Percolation(10);
-        for (int i = 0; i< 9; i++)
-        {
-            test.open(i+1, 4);
-        }
-        StdOut.println(test.percolates());
-        StdOut.println(test.numberOfOpenSites());
-    }
+    // public static void main(String[] args)
+    // {
+    //     Percolation test = new Percolation(10);
+    //     for (int i = 0; i< 9; i++)
+    //     {
+    //         test.open(i+1, 4);
+    //     }
+    //     StdOut.println(test.percolates());
+    //     StdOut.println(test.numberOfOpenSites());
+    // }
 
 }
